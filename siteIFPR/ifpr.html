@@ -9,18 +9,36 @@
 
     <!--Importação do CSS do Bootstrap-->
     <link rel="stylesheet" href="css/bootsrap.css">
-    
+
     <!--Importar jquey-->
     <script src="js/jquery-3.6.1.js"></script>
-    
+
     <!--Importar o JS do bootstrap-->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn-topo").click(function (e) {
+                e.preventDefault();
+
+                $(".topo").show();
+                $("#barra-topo").show();
+                $(".redes-sociais").hide();
+                $(".links").hide();
+
+                $(".menu").show();
+                $(".botoes").fadeIn();
+            });
+        });
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <style>
         * {
@@ -55,6 +73,7 @@
             color: #4A4A4A;
             display: inline;
             margin-left: 35px;
+
         }
 
         .botoes li {
@@ -76,14 +95,28 @@
         <div class="row">
 
             <div class="col-lg-2">
-                Menu Lateral
+                <h3>Menu Lateral</h3>
+
+                <button class="btn btn-success d-block mt-2" id="btn-topo">
+                    Botão 1
+                </button>
+
+                <button class="btn btn-success d-block mt-2" id="btn-aluno">
+                    Botão 2
+                </button>
+
+                <button class="btn btn-success d-block mt-2" id="btn-online">
+                    Botão 3
+                </button>
             </div>
+
 
             <div class="col-lg-10">
 
                 <div class="topo">
                     <a href="https://paranavai.ifpr.edu.br"> CASINHA </a> / <span>Área do Aluno</span>
                 </div>
+
 
                 <div class="menu">
                     <ul>
@@ -99,6 +132,7 @@
                         <li><a href="https://paranavai.ifpr.edu.br/aluno/professores/">Professores</a></li>
                     </ul>
                 </div>
+
 
                 <div>
 
@@ -176,10 +210,9 @@
                         </ul>
                     </div>
 
-                    <div>
+                    <div class="links">
 
                         <p><strong>Aluno Online</strong></p>
-
 
                         <a href="https://paranavai.ifpr.edu.br/wp-content/uploads/2022/03/Orientações-para-Estudantes-–-Ano-Letivo-2022-Anexo-1.pdf"
                             target="_blank">Orientações para Estudantes – Ano Letivo 2022</a>
@@ -214,7 +247,7 @@
 
                     </div>
 
-                    <div>
+                    <div class="redes-sociais">
 
                         <h6>Compartilhe</h6>
 
@@ -227,9 +260,9 @@
 
                 </div>
 
-            </div> <!-- fim do conteúdo col-lg-9 -->
+            </div> <!-- Fim do conteúdo col-lg-9 -->
 
-        </div> <!-- fim do row -->
+        </div> <!-- Fim do row -->
 
     </div> <!-- Fim do container -->
 
